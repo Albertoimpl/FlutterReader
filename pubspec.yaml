@@ -1,0 +1,5 @@
+name: FlutterReader
+description: Sample reader
+dependencies:
+  flutter:
+    path: ../../flutter/packages/flutter
