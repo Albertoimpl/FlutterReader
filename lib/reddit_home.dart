@@ -24,7 +24,7 @@ class RedditHomeState extends State<RedditHome> {
         ),
         body: new MaterialList<Reddit>(
             type: MaterialListType.oneLineWithAvatar,
-            items: config.reddits,
+            items: widget.reddits,
             itemBuilder: (BuildContext context, Reddit reddit, int index) {
               return new RedditRow(
                   reddit: reddit
