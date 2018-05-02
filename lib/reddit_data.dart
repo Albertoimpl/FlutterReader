@@ -1,7 +1,6 @@
 
 import 'dart:convert';
 
-import 'package:flutter/http.dart' as http;
 
 class Reddit {
   String title;
@@ -52,8 +51,17 @@ class RedditDataFetcher {
 class RedditDataParser {
 
   static RedditData parse(String response) {
-    var jsonResponse = JSON.decode(response);
-    return new RedditData(jsonResponse.toList());
+    List jsonResponse = JSON.decode(response);
+
+    print("Item 0, 1 and 2 consecutively : ${jsonResponse[0]}, ${jsonResponse[1]} and ${jsonResponse[2]}");
+
+    List<List<String>> parseData = new List<List<String>>();
+
+    for (List listOfStrings in jsonResponse) {
+      parseData.add(listOfStrings.cast<String>());
+    }
+
+    return new RedditData(parseData);
   }
 
 }

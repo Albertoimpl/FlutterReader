@@ -1,5 +1,5 @@
+import 'package:FlutterReader/reddit_data.dart';
 import "package:test/test.dart";
-import 'package:RedditDart/reddit_data.dart';
 
 void main() {
   test("should parse the reddit response", () {
